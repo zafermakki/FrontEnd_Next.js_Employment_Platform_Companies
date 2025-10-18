@@ -3,8 +3,11 @@
 import HomeIcon from "@mui/icons-material/Home";
 import BusinessIcon from "@mui/icons-material/Business";
 import PostAddIcon from "@mui/icons-material/PostAdd";
-import MessageIcon from '@mui/icons-material/Message';
 import LogoutIcon from "@mui/icons-material/Logout";
+import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+import BadgeIcon from '@mui/icons-material/Badge';
+import MessageIcon from '@mui/icons-material/Message';
+
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 
@@ -17,8 +20,10 @@ interface SidebarProps {
 const navItems = [
   { key: "home", label: "Main Page", icon: <HomeIcon /> },
   { key: "company", label: "Company Information", icon: <BusinessIcon /> },
-  { key: "news", label: "Advertisement", icon: <PostAddIcon /> },
-  { key: "messages", label: "Messages", icon: <MessageIcon /> },
+  { key: "advertisement", label: "Advertisement", icon: <PostAddIcon /> },
+  { key: "myadvertisements", label: "My Advertisements", icon: <DynamicFeedIcon /> },
+  { key: "employmentrequests", label: "Employment Requests", icon: <BadgeIcon /> },
+  { key: "recruitmentletters", label: "Recruitment Letters", icon: <MessageIcon /> },
 ];
 
 export default function Sidebar({ active, setActive, closeMenu }: SidebarProps) {
