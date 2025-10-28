@@ -140,9 +140,14 @@ export default function HomePage() {
               <h4 className="text-xl font-semibold text-gray-800 text-center">
                 {profile.full_name}
               </h4>
-              <p className="text-sm text-gray-600 text-center mb-2">
-                {profile.user.email}
-              </p>
+              <div className="w-full flex justify-center">
+                <p
+                  className="text-sm text-gray-600 text-center mb-2 break-words max-w-[90%]"
+                  style={{ wordBreak: "break-word", overflowWrap: "anywhere" }}
+                >
+                  {profile.user.email}
+                </p>
+              </div>
               <p className="text-gray-700 text-center mb-3 line-clamp-2">
                 {profile.bio || "No bio provided"}
               </p>
